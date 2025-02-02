@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+/*---------------------------------------------------menu latéral gauche-------------------------------------------------------------------------------------------------------*/
+.side-nav {
+  width: 70px; /* Réduire la largeur par défaut */
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 30px 15px;
+  background: rgba(17, 0, 255, 0.281); /* couleur de fond du menu */
+  backdrop-filter: blur(2px); /* opacité du fond du menu */
+  display: flex;
+  flex-direction: column;
+  transition: width 0.5s, background 0.5s, color 0.5s; 
+}
+
+/*-----------------------------------------------------------------------menu latéral droite---------------------------------------------------------------------------*/
+.side-nav2 {
+  width: 100px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 30px 15px;
+  background: rgba(255, 0, 0, 0.178);
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.5s, background 0.5s, color 0.5s; /* Add more transitions */
+}
+
+.side-nav2:hover {
+  width: 180px; /* Ajustez cette valeur selon vos besoins */
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/* Masquer les intitulés par défaut */
+ul li p {
+  display: none;
+}
+
+/* Afficher les intitulés lorsque la barre de navigation est survolée */
+.side-nav:hover ul li p,
+.side-nav2:hover ul li p {
+  display: block;
+}
+
+/* Mettez en surbrillance le menu latéral au survol */
+.side-nav:hover {
+  background: rgba(190, 176, 111, 0.5); /* Change background color on hover */
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  width: 80px;
+  font-size: 14px; /* Corrected font size */
+  padding: 10px;
+  border-radius: 80px;
+  margin: 0 auto; /* Center vertically */
+  overflow: hidden;
+}
+
+.user div {
+  display: none;
+}
+
+.user h2 {
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.profile {
+  width: 40px; /*-taille de la photo dans le panneau--*/
+  border-radius: 50%;
+  margin: auto;
+}
+
+.star-img {
+  width: 20px;
+  display: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0 15px;
+}
+
+ul li {
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/*---------taille des icônes--------------*/
+ul li img {
+  width: 30px;
+  margin-right: 0px;
+}
+
+ul li p {
+  white-space: nowrap;
+  /* Removed display: none; */
+}
+
+/*-------largeur d'ouverture du menu latéral------*/
+@media (min-width: 768px) {
+  .side-nav {
+    width: 100px; /* largeur de base menu laterale sans survol */
+  }
+}
+
+.side-nav:hover {
+  width: 400px; /*---largeur ouverture du menue en survol---*/
+}
+
+/*---navigation latérale : survol ---*/
+.side-nav:hover .user div {
+  display: block;
+}
+
+.side-nav:hover .user {
+  width: 100%; 
+  background: rgba(0, 217, 255, 0.589); /*--couleur de fond photo dans le menu en haut--*/
+  backdrop-filter: blur(5px);
+  justify-content: flex-start; /* Align content to the left */
+  padding-left: 20px; /* Add padding for better spacing */
+}
+
+.side-nav:hover .star-img {
+  display: block;
+}
+
+.side-nav:hover ul li p {
+  display: block;
+  margin-left: 10px; /* Add margin for better spacing */
+}
+
+.side-nav:hover ul li img {
+  margin-right: 10px;
+}
+
+/* Nouveaux styles pour mettre en évidence les liens et les icônes au survol */
+.side-nav ul li:hover img {
+  filter: brightness(1.5); 
+  color: #00ff00; 
+
+  transition-duration: 0.8s;
+}
+
+.side-nav ul li:hover p {
+  color: #00ff00; /* Change text color */
+}
+
+.exposer {
+  color: rgb(255, 0, 0);
+}
+
+.hidden {
+  display: none;
+}
+
+/*-----style css2------*/
+main {
+  height: 80vh;
+  width: 90%; /* Adjusted width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*----titre en plein milieux de la page
+.TITRE {
+  font-size: 6rem;
+  letter-spacing: 10px;
+  color: #0b00279c;
+/*}*/
+.TITRE {
+  font-size: 4rem;
+  letter-spacing: 8px;
+  color: #4c00ffe3;
+  position: absolute;
+  top: 88%;
+  left: 49.9%;
+  transform: translate(-50%, -50%);
+}
+
+/*position du popup*/
+.popup_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.438);/*arierre plans douverture popu */
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup_container.active {
+  width: 100%; /* Adjusted width when active */
+  display: flex;
+}
+
+.popup {
+  background-color: #5065a8b2;
+  border-radius: 10px;
+  padding: 6px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr)); /* Responsive grid */
+  gap: 1px;
+  animation: animationA 1s ease-in-out 0.5s backwards;
+}

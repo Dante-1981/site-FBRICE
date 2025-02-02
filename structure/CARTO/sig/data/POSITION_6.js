@@ -1,0 +1,1 @@
+var json_POSITION_6 = {"type":"FeatureCollection","name":"POSITION_6","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"INFO":"JE ME TROUVE ICI"},"geometry":{"type":"Point","coordinates":[2.998100005220989,50.601169494319578]}}]}

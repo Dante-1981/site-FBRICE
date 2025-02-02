@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    border: 1px solid #000; /* Ajoutez une bordure au container */ padding: -0px; /* Ajoutez un peu de padding pour l'espacement */
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.svg-dimension {
+    width: 100%;
+    height: auto;
+    max-width: 1000px;  /* Ajustez selon vos besoins */
+}
+
+/* Media queries pour différentes tailles d'écran */
+@media (min-width: 600px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 100%;
+    }
+}

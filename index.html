@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brice François</title>
+    <link rel="stylesheet" href="./structure/css/style.css">
+   
+    <style>
+        body {
+            background-image: url(./structure/images/archi08.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+    <script>
+        function ouvrirPopup(url) {
+            var width = 900;/*--largeur de la fenétre popup PAGE WEB---*/
+            var height = 900;/*--hauteur de la fenétre popup---*/
+            var left = (screen.width - width) / 2;
+            var top = (screen.height - height) / 2;
+            window.open(url, 'popup', 'width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+        }
+    </script>
+</head>
+<body>
+
+    <div class="header">
+  
+<!-------------------------------------------------------------paneau de gauche--------------------------------------------------------------------------------------------------------------------------------->      
+        <div class="side-nav">
+            <h5>espace 3D</h5>
+            <div class="user">
+                <img src="./structure/images/user.png" alt="profile" class="profile">
+                <div>
+                    <h2>François Brice</h2>
+                    <p>brice.francois.1981@gmail.com</p>
+                </div>
+                <img src="./structure/images/star.png" class="star-img" >
+            </div>
+            
+            <ul>
+                <li><img src="./structure/images/exposer.png" alt="exposer" class="exposer"><p >presentation<br><em style="font-size: smaller;">cliquer sur l'icon</em> </p> </p></li><!------icon info empoule----->
+
+           
+
+                <li><img src="./structure/icon/cube-3d.png"><p><a href="javascript:void(0);" onclick="ouvrirPopup('./structure/3D/géométri des sol/index.html');">LIDAR</a></p></li>
+                <li><img src="./structure/icon/cube-3d.png"><p><a href="javascript:void(0);" onclick="ouvrirPopup('./structure/3D/contexte/index.html');">Contexte</a></p></li>
+           
+                <li><img src="./structure/icon/cube-3d.png"><p><a href="javascript:void(0);" onclick="ouvrirPopup('./structure/3D/structure/index.html');">Structure</a></p></li>
+              
+            </ul>
+            <ul>
+                <li><img src="structure/images/logout.png"><p><a href="https://www.google.fr/">SORTIE</a></p></li>
+            </ul>
+        </div>
+        <!-------------------------------------------------------------paneau de droite--------------------------------------------------------------------------------------------------------------------------------->
+        <div class="side-nav2">
+            <h5>Espace 2D</h5>
+            <div class="user">
+        
+                <div>
+                    <h2>François Brice</h2> 
+                    <p>brice.francois.1981@gmail.com</p>
+                </div>
+                <img src="./structure/images/star.png" class="star-img">
+            </div>
+            
+            <ul>
+              
+                <li><img src="./structure/images/boussol.gif"><p><a href="javascript:void(0);" onclick="ouvrirPopup('./structure/CARTO/sig/index.html');">Cartographie <br>SIG</a></p></li> 
+                <li><img src="./structure/icon/crayon régle.svg"><p><a href="javascript:void(0);" onclick="ouvrirPopup('./structure/2D/plans masse/index.html');">Plans Masse</a></p></li> 
+                <li><img src="./structure/icon/crayon régle.svg"><p><a href="javascript:void(0);" onclick="ouvrirPopup('./structure/2D/plans archi/index.html');">plans archi</a></p></li>
+                <li><img src="./structure/icon/crayon régle.svg"><p><a href="javascript:void(0);" onclick="ouvrirPopup('./structure/2D/PLANS STRUCTURE/index.html');">plans Structure</a></p></li> 
+            </ul>
+        </div>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    </div>
+    <main>
+        <!----LE MOT AND PEIN MILIEU------>
+        <h1 class="TITRE">F.Brice</h1>
+
+
+        <div class="popup_container">
+            <section class="popup">
+                <div class="image_container">
+                    <img src="./structure/images/user.png" alt="user_image">
+                </div>
+                <div class="description">
+                    <p class="description_heading"><strong>François Brice</strong></p>
+                   
+                    <p>En tant que dessinateur-projeteur, je conçois des espaces de vie qui vous ressemblent...</p>
+                    <p><strong>Outil utilisée</strong></p>
+                    <p>Revit,autocad,sketshup,Qgis,blander,visual code studio</p>
+                    <p><strong>Contenu</p></strong>
+                    <p><strong>À gauche</strong>, vous trouverez un panneau avec des ongles qui contiennent des scènes 3D.  </p>
+                    <p>J'ai fait le choix d'un rendu three JS,low-poly pour la rapidité d'exécution. </p>
+                    <p>Chaque maquette est dynamique, vous pouvez zoomer et tourner par exemple. 
+                    <p>Rendez-vous dans la section Aide pour découvrir les commandes possibles</p>
+                    <p><strong>a Droite</strong> , vous touverer la section 2D qui et composer d'ongler qui devoileron diferent plans de diferent type .</p>
+                    <p>Pour la 2D, j'ai fait le choix de la technologie SVG, ce qui permet d'avoir n'importe quel niveau de zoom et lui donne une  qualité invariable.</p>
+                    <p>j'ai conçu ce cite avec visuale studio code ce qui m'a permis d'aprendre le html5,le CSS,le javascripit. </p>
+                    <p>Je ne maitrise pas ces langages, mais j'ai appris à les exploiter. </p>
+                    <p>Je vous laisse tester le rendu en espérant vous procurer du plaisir à cette visite.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="./structure/JS/script.js"></script>
+    <script src="./structure/JS/lidar.js"></script>
+</body>
+</html>
